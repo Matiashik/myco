@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/universai/myfo/myco/oop/fone/fone_1.1/fone_1.2.csproj": {}
+  },
+  "projects": {
+    "/home/universai/myfo/myco/oop/fone/fone_1.1/fone_1.2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/universai/myfo/myco/oop/fone/fone_1.1/fone_1.2.csproj",
+        "projectName": "fone_1.2",
+        "projectPath": "/home/universai/myfo/myco/oop/fone/fone_1.1/fone_1.2.csproj",
+        "packagesPath": "/home/universai/.nuget/packages/",
+        "outputPath": "/home/universai/myfo/myco/oop/fone/fone_1.1/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/universai/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

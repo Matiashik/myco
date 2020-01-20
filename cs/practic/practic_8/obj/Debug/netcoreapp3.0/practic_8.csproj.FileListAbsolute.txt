@@ -1,0 +1,11 @@
+/home/universai/myfo/myco/cs/practic/practic_8/bin/Debug/netcoreapp3.0/practic_8
+/home/universai/myfo/myco/cs/practic/practic_8/bin/Debug/netcoreapp3.0/practic_8.deps.json
+/home/universai/myfo/myco/cs/practic/practic_8/bin/Debug/netcoreapp3.0/practic_8.runtimeconfig.json
+/home/universai/myfo/myco/cs/practic/practic_8/bin/Debug/netcoreapp3.0/practic_8.runtimeconfig.dev.json
+/home/universai/myfo/myco/cs/practic/practic_8/bin/Debug/netcoreapp3.0/practic_8.dll
+/home/universai/myfo/myco/cs/practic/practic_8/bin/Debug/netcoreapp3.0/practic_8.pdb
+/home/universai/myfo/myco/cs/practic/practic_8/obj/Debug/netcoreapp3.0/practic_8.csprojAssemblyReference.cache
+/home/universai/myfo/myco/cs/practic/practic_8/obj/Debug/netcoreapp3.0/practic_8.AssemblyInfoInputs.cache
+/home/universai/myfo/myco/cs/practic/practic_8/obj/Debug/netcoreapp3.0/practic_8.AssemblyInfo.cs
+/home/universai/myfo/myco/cs/practic/practic_8/obj/Debug/netcoreapp3.0/practic_8.dll
+/home/universai/myfo/myco/cs/practic/practic_8/obj/Debug/netcoreapp3.0/practic_8.pdb

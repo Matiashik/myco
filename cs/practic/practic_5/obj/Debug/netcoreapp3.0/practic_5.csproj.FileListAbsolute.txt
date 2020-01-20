@@ -1,0 +1,11 @@
+U:\myco\cs\practic\practic_5\bin\Debug\netcoreapp3.0\practic_5.exe
+U:\myco\cs\practic\practic_5\bin\Debug\netcoreapp3.0\practic_5.deps.json
+U:\myco\cs\practic\practic_5\bin\Debug\netcoreapp3.0\practic_5.runtimeconfig.json
+U:\myco\cs\practic\practic_5\bin\Debug\netcoreapp3.0\practic_5.runtimeconfig.dev.json
+U:\myco\cs\practic\practic_5\bin\Debug\netcoreapp3.0\practic_5.dll
+U:\myco\cs\practic\practic_5\bin\Debug\netcoreapp3.0\practic_5.pdb
+U:\myco\cs\practic\practic_5\obj\Debug\netcoreapp3.0\practic_5.csprojAssemblyReference.cache
+U:\myco\cs\practic\practic_5\obj\Debug\netcoreapp3.0\practic_5.AssemblyInfoInputs.cache
+U:\myco\cs\practic\practic_5\obj\Debug\netcoreapp3.0\practic_5.AssemblyInfo.cs
+U:\myco\cs\practic\practic_5\obj\Debug\netcoreapp3.0\practic_5.dll
+U:\myco\cs\practic\practic_5\obj\Debug\netcoreapp3.0\practic_5.pdb
