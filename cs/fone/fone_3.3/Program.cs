@@ -17,6 +17,7 @@ namespace fone_3._3
             int[,] board = new int[Height, Width];
             Position pos = new Position(4, 0);
             WriteLine("Доска вводится сверху вниз");
+            WriteLine("0 - пустая клетка, 1 - шашка противника, 2 - ваша шашка\nВвод через пробел");
             for (int i = 0; i < Height; i++)
             {
                 WriteLine("Введите ряд номер {0}:", i + 1);
