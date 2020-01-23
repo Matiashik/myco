@@ -3,8 +3,9 @@
 
 init
 ===
-###oh, shit, here we go again
+oh, shit, here we go again
 
-stable_10
+stable_1
 ===
-###Практика 10
+Практика 11
+.1 - доделал
