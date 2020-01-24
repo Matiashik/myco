@@ -4,12 +4,11 @@ namespace practic_10
 {
     class Program
     {
-        enum Days
-        {
-            jan = 31, feb = 28, mar = 31, apr = 30, 
-            may = 31,jun = 30, jul = 31, aug = 31, 
-            sep = 30, oct = 31, nov = 30, dec = 31
-        }
+        static int[] Days = {
+            31, 28, 31, 30, 
+            31, 30, 31, 31, 
+            30, 31, 30, 31
+        };
         enum Month
         {
             jan = 1, feb, mar, apr, may, jun,
@@ -22,17 +21,13 @@ namespace practic_10
             Console.Write("Введите день: "); int Date = Convert.ToInt32(Console.ReadLine());
             Console.Write("Сколько нужно отсчитать: "); int D = Convert.ToInt32(Console.ReadLine());
             Month month = (Month)M;
-            Days days;
-            for(days = Days.jan; days <= Days.dec; days++) if(days.ToString() == month.ToString()) break;
             int DAYS = Date;
             while(D != 0)
             {
-                if(DAYS > (int)days)
+                if(DAYS > Days[(int)month - 1])
                 {
                     DAYS = 1;
-                    if(days != Days.dec) days++;
-                    else days = Days.jan;
-                    if(month != Month.dec) days++;
+                    if(month != Month.dec) month++;
                     else month = Month.jan;
                 }
                 DAYS++;
