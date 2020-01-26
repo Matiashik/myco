@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace bin
 {
@@ -6,7 +7,7 @@ namespace bin
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello world!");
         }
     }
 }

@@ -1,0 +1,2 @@
+#!/snap/bin/powershell
+python3 pycode/main.py
