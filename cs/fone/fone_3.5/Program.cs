@@ -57,14 +57,6 @@ namespace fone_3._5
         public int group; //2
         public string subject; //3
         public Number number; //4
-        public Lesson(int c, string t, int g, string s, Number n)
-        {
-            this.classroom = c;
-            this.group = g;
-            this.teacher = t;
-            this.subject = s;
-            this.number = n;
-        }
         public void Print()
         {
             Console.WriteLine("=====");
