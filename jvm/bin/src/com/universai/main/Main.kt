@@ -1,4 +1,4 @@
-package main
+package com.universai.main
 
 fun main() {
     println("Hello world!")
