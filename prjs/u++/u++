@@ -1,0 +1,44 @@
+#!/snap/bin/powershell
+
+$arg1 = $args[0]
+
+function InitMain {
+    WriteFile "#include <iostream>
+
+using namespace std;
+
+int main() {
+    cout << `"Hello world!\n`";
+}
+" src/Main.cpp
+}
+
+function Build {
+    $argv = Get-Content "project.upp"
+    $argv = $argv.Split("`n")
+    $args = ""
+    for($i = 0; $i -lt $argv.Length; $i++) {
+        $args += $argv[$i]
+    }
+    g++ $args -o ProjectOutput
+    mv ProjectOutput bin/
+}
+if($arg1 -eq "init") {
+    mkdir src
+    mkdir src/lib
+    touch src/Main.cpp
+    InitMain
+    mkdir bin
+    touch project.upp
+    WriteFile "src/Main.cpp" project.upp
+}
+if($arg1 -eq "build") {
+    Build
+}
+if($arg1 -eq "run") {
+    Build
+    ./bin/ProjectOutput
+}
+if($None -eq $arg1) {
+    Write-Output "v-1.1"
+}
