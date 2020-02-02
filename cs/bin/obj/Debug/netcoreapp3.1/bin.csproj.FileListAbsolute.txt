@@ -9,3 +9,11 @@
 /home/universai/myco/cs/bin/obj/Debug/netcoreapp3.1/bin.AssemblyInfo.cs
 /home/universai/myco/cs/bin/obj/Debug/netcoreapp3.1/bin.dll
 /home/universai/myco/cs/bin/obj/Debug/netcoreapp3.1/bin.pdb
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/AtkSharp.dll
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/CairoSharp.dll
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/GdkSharp.dll
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/GioSharp.dll
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/GLibSharp.dll
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/GtkSharp.dll
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/PangoSharp.dll
+/home/universai/myco/cs/bin/obj/Debug/netcoreapp3.1/bin.csproj.CopyComplete

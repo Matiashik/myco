@@ -1,5 +1,5 @@
 ﻿using System;
-using System.IO;
+using Gtk;
 
 namespace bin
 {
@@ -7,7 +7,12 @@ namespace bin
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world!");
+            Application.Init();
+            var builder = new Gtk.Builder();
+            builder.AddFromFile("Main.ui");
+            var window = (Gtk.Window)(builder.GetObject("window_main"));
+            window.ShowAll();
+            Application.Run();
         }
     }
 }
