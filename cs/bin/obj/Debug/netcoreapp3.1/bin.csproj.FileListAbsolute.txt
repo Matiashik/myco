@@ -17,3 +17,4 @@
 /home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/GtkSharp.dll
 /home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/PangoSharp.dll
 /home/universai/myco/cs/bin/obj/Debug/netcoreapp3.1/bin.csproj.CopyComplete
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/res/Main.ui

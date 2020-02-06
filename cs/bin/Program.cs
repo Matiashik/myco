@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Resources;
 using Gtk;
 
 namespace bin
@@ -9,8 +9,8 @@ namespace bin
         {
             Application.Init();
             var builder = new Gtk.Builder();
-            builder.AddFromFile("Main.ui");
-            var window = (Gtk.Window)(builder.GetObject("window_main"));
+            builder.AddFromFile("res/Main.ui");
+            var window = (Gtk.Window)(builder.GetObject("Main_w"));
             window.ShowAll();
             Application.Run();
         }
