@@ -1,5 +1,5 @@
-﻿using System.Resources;
-using Gtk;
+﻿using System;
+using System.Data.SqlClient;
 
 namespace bin
 {
@@ -7,12 +7,17 @@ namespace bin
     {
         static void Main(string[] args)
         {
-            Application.Init();
-            var builder = new Gtk.Builder();
-            builder.AddFromFile("res/Main.ui");
-            var window = (Gtk.Window)(builder.GetObject("Main_w"));
-            window.ShowAll();
-            Application.Run();
+            var Con = new SqlConnection("Data Source=localhost;Initial Catalog=UVDB;User Id=universai;Password=solomatin11");
+            Con.Open();
+            var Stmt = Con.CreateCommand();
+            Stmt.CommandText = "SELECT * FROM dbo.People";
+            var Exq = Stmt.ExecuteReader();
+            while(Exq.Read())
+            {
+                Console.Write(Exq.GetInt32(0) + " ");
+                Console.WriteLine(Exq.GetString(1));
+            }
+            Con.Close();
         }
     }
 }

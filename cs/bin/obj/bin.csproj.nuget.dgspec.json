@@ -36,9 +36,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "GtkSharp": {
+            "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[3.22.25.56, )"
+              "version": "[4.8.0, )"
             }
           },
           "imports": [
