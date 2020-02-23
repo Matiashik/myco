@@ -1,31 +1,26 @@
 package com.universai;
 
-import com.mongodb.MongoClient;
-import org.bson.Document;
-
-import java.util.ArrayList;
-import java.util.Random;
+import java.sql.*;
 
 public class Main {
-    public static void main(String[] args) {
-        var mgcl = new MongoClient("localhost");
-        var mgdb = mgcl.getDatabase("uvdb");
-        var col = mgdb.getCollection("List");
-        var lang = new String[] {"GO", "JAVA", "C#", "F#", "C++", "JS"};
-        var docs = new ArrayList<Document>();
-        for(int i = 0; i < 1000; i++) {
-            try {
-                docs.add(new Document("lang", lang[(int)(Math.random() * 10)])
-                        .append("progger", "Matiash")
-                        .append("i", i)
-                );
-            } catch (Exception ex) {
-                docs.add(new Document("lang", "Python")
-                        .append("progger", "Pidaras")
-                        .append("i", i)
-                );
-            }
+    public static void main(String[] args) throws SQLException {
+        var con = DriverManager.getConnection("jdbc:sqlserver://localhost;databaseName=UVDB;user=SA;" +
+                "password=Solomatin11;");
+        var stmt = con.createStatement();
+        var res = stmt.executeQuery("select * from List");
+        while(res.next()) {
+            System.out.println(res.getInt(1) + " " + res.getString(2) + " " + res.getString(3));
         }
-        col.insertMany(docs);
+    }
+    public static void Insert(Statement stmt) throws SQLException {
+        var langs = new String[]{"F#", "C#", "GO", "JS", "C++", "JAVA"};
+        for(int i = 1; i <= 1000; i++) {
+            var str = "insert into List values(";
+            String lang, auth;
+            try{lang = langs[(int)(Math.random()*10)]; auth = "MATIASH";}
+            catch(Exception ex){lang = "PYTHON"; auth = "PIDOR";}
+            var cmd = "insert into List values(" + i + ", \'" + lang + "\', \'" + auth + "\');";
+            stmt.execute(cmd);
+        }
     }
 }
