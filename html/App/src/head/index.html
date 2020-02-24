@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<script>
+  function toA() {
+    var dl = (String)(document.location)
+    dl = dl.split("/")
+    var nl = [];
+    for (var i = 0; i < dl.length - 2; i++) {
+      nl[i] = dl[i] + '/';
+    }
+    nl[dl.length - 1] = "a.html"
+    nl = nl.join("")
+    document.location.replace(nl)
+  }
+</script>
+
+<body>
+  <h1>
+    <p id="toA" onclick="toA()">
+      <a href="">Let's go to a!</a>
+    </p>
+  </h1>
+</body>
