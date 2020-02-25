@@ -79,12 +79,12 @@ namespace fone_4._1
         }
         public (double, double) Peres(PP pp)
         {
-            double l = Math.Max(this.x, pp.x);
-            double t = Math.Min(this.y + this.sh, pp.y + pp.sh);
-            double r = Math.Min(this.x + this.g, pp.x + pp.g);
-            double b = Math.Max(this.y, pp.y);
+            double l = this.x > pp.x ? this.x : pp.x;
+            double v = this.y + this.sh < pp.y + pp.sh ? this.y + this.sh : pp.y + pp.sh;
+            double r = this.x + this.g < pp.x + pp.g ? this.x + this.g : pp.x + pp.g;
+            double n = this.y > pp.y ? this.y : pp.y;
             double g = r - l;
-            double sh = t - b;
+            double sh = v - n;
             if(g > 0 && sh > 0) return (g, sh);
             else return (0, 0);
         }
