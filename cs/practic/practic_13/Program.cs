@@ -9,9 +9,9 @@ namespace practic_13
             Point3D point1 = new Point3D(3, 2, 5);
             Point3D point2 = new Point3D(5, 4, 1);
             point1.Print(); point2.Print();
-            point1,Sum(point2); point1.Print();
+            point1.Sum(point2); point1.Print();
             point2.Sum(3); point2.Print();
-            System.Console.WriteLine(RadVec);
+            System.Console.WriteLine(point1.RadVec);
             point1.X = 3;
             point1.Print();
             point1.Move('z', 3);
@@ -27,7 +27,7 @@ namespace practic_13
         {
             get {return Math.Sqrt((double)(x*x + y*y + z*z));}
         }
-        public void Mult
+        public int Mult
         {
             set
             {

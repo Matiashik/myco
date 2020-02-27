@@ -1,9 +1,8 @@
-import {
-  app,
-  BrowserWindow
-} from 'electron';
+import { app, BrowserWindow } from 'electron';
+
 const pth = app.getAppPath();
 
+// eslint-disable-next-line global-require
 if (require('electron-squirrel-startup')) {
   app.quit();
 }
@@ -11,17 +10,16 @@ if (require('electron-squirrel-startup')) {
 let mainWindow;
 
 const createWindow = () => {
-
   mainWindow = new BrowserWindow({
     width: 500,
     height: 300,
     autoHideMenuBar: true,
-    icon: pth + "/res/100.png"
+    icon: `${pth}/res/100.png`,
   });
 
-  mainWindow.loadFile(pth + "/src/head/index.html");
+  mainWindow.loadFile(`${pth}/src/index.html`);
 
-  //mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   mainWindow.on('closed', () => {
     mainWindow = null;
