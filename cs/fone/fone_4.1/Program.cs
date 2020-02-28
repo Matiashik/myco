@@ -14,17 +14,73 @@ namespace fone_4._1
     class PP
     {
         private double h;
+        public double H
+        {
+            get { return h; }
+            set
+            {
+                try
+                {
+                    if (value > 0) h = value;
+                    else throw new Exception("Incorrect h");
+                }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine(ex.Message);
+                }
+            }
+        }
         private double sh;
+        public double Sh
+        {
+            get { return h; }
+            set
+            {
+                try
+                {
+                    if (value > 0) h = value;
+                    else throw new Exception("Incorrect sh");
+                }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine(ex.Message);
+                }
+            }
+        }
         private double g;
+        public double G
+        {
+            get { return h; }
+            set
+            {
+                try
+                {
+                    if (value > 0) h = value;
+                    else throw new Exception("Incorrect g");
+                }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine(ex.Message);
+                }
+            }
+        }
         private double x;
         private double y;
         public PP(double h, double sh, double g, double x, double y)
         {
-            this.h = h; this.sh = sh; this.g = g; this.x = x; this.y = y;
+            this.h = h;
+            this.sh = sh;
+            this.g = g;
+            this.x = x;
+            this.y = y;
         }
         public PP()
         {
-            h = 5; sh = 6; g = 7; x = 0; y = 0;
+            h = 5;
+            sh = 6;
+            g = 7;
+            x = 0;
+            y = 0;
         }
         public void Print()
         {
@@ -32,50 +88,46 @@ namespace fone_4._1
         }
         public void PrintS(string chr)
         {
-            switch(chr)
+            switch (chr)
             {
-                case "h": System.Console.Write(h); break;
-                case "sh": System.Console.WriteLine(sh); break;
-                case "g": System.Console.WriteLine(g); break;
-                default: System.Console.WriteLine("h, sh or g"); break;
+                case "h":
+                    System.Console.Write(h);
+                    break;
+                case "sh":
+                    System.Console.WriteLine(sh);
+                    break;
+                case "g":
+                    System.Console.WriteLine(g);
+                    break;
+                default:
+                    System.Console.WriteLine("h, sh or g");
+                    break;
             }
         }
         public double GetP(string chr)
         {
-            switch(chr)
+            switch (chr)
             {
-                case "hg": return g * h;
-                case "hsh": return sh * h;
-                case "gsh": return g * sh;
-                default: System.Console.WriteLine("hg, hsh or gsh"); break;
+                case "hg":
+                    return g * h;
+                case "hsh":
+                    return sh * h;
+                case "gsh":
+                    return g * sh;
+                default:
+                    System.Console.WriteLine("Incorrect input hg, hsh or gsh");
+                    break;
             }
             return 0;
         }
-        public double GetV()
+        public double V
         {
-            return g*h*sh;
-        }
-        public double GetS(string chr)
-        {
-            switch(chr)
-            {
-                case "h": return h;
-                case "sh": return sh;
-                case "g": return g;
-                default: System.Console.WriteLine("h, sh or g"); break;
-            }
-            return 0;
+            get { return g * h * sh; }
         }
         public void Move(double x, double y)
         {
             this.x += x;
             this.y += y;
-        }
-        public void Resize(double h, double sh, double g)
-        {
-            this.h += h;
-            this.g += g;
-            this.sh += sh;
         }
         public (double, double) Peres(PP pp)
         {
@@ -85,7 +137,7 @@ namespace fone_4._1
             double n = this.y > pp.y ? this.y : pp.y;
             double g = r - l;
             double sh = v - n;
-            if(g > 0 && sh > 0) return (g, sh);
+            if (g > 0 && sh > 0) return (g, sh);
             else return (0, 0);
         }
     }
