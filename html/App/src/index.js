@@ -1,8 +1,10 @@
-import { app, BrowserWindow } from 'electron';
+import {
+  app,
+  BrowserWindow
+} from 'electron';
 
 const pth = app.getAppPath();
 
-// eslint-disable-next-line global-require
 if (require('electron-squirrel-startup')) {
   app.quit();
 }
