@@ -66,6 +66,50 @@ namespace fone_4._1
         }
         private double x;
         private double y;
+        public bool IsCube
+        {
+            get
+            {
+                if (h == sh && h == g) return true;
+                else return false;
+            }
+        }
+        public double RLSideS
+        {
+            get { return h * sh; }
+        }
+        public double FBSideS
+        {
+            get { return h * g; }
+        }
+        public double OsnS
+        {
+            get { return g * sh; }
+        }
+        public double V
+        {
+            get { return g * h * sh; }
+        }
+        public double Diag
+        {
+            get { return Math.Sqrt(g * g + h * h + sh * sh); }
+        }
+        public double RLSideP
+        {
+            get { return 2 * (h + sh); }
+        }
+        public double FBSideP
+        {
+            get { return 2 * (h + g); }
+        }
+        public double OsnP
+        {
+            get { return 2 * (g + sh); }
+        }
+        public double Rad
+        {
+            get { return Diag / 2; }
+        }
         public PP(double h, double sh, double g, double x, double y)
         {
             this.h = h;
@@ -103,26 +147,6 @@ namespace fone_4._1
                     System.Console.WriteLine("h, sh or g");
                     break;
             }
-        }
-        public double GetP(string chr)
-        {
-            switch (chr)
-            {
-                case "hg":
-                    return g * h;
-                case "hsh":
-                    return sh * h;
-                case "gsh":
-                    return g * sh;
-                default:
-                    System.Console.WriteLine("Incorrect input hg, hsh or gsh");
-                    break;
-            }
-            return 0;
-        }
-        public double V
-        {
-            get { return g * h * sh; }
         }
         public void Move(double x, double y)
         {

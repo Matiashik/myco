@@ -1,9 +1,8 @@
 {
-  "name": "app",
-  "productName": "app",
+  "name": "temp",
+  "productName": "temp",
   "version": "1.0.0",
-  "description": "Just app",
-  "icon": "res/500.icns",
+  "description": "Temp",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -12,7 +11,7 @@
     "publish": "electron-forge publish"
   },
   "keywords": [],
-  "author": "Universai",
+  "author": "gdms0918",
   "license": "MIT",
   "config": {
     "forge": {
@@ -21,7 +20,7 @@
           "wix"
         ],
         "darwin": [
-          "zip"
+          "dmg"
         ],
         "linux": [
           "deb",
@@ -32,7 +31,7 @@
         "packageManager": "yarn"
       },
       "electronWinstallerConfig": {
-        "name": "app"
+        "name": "temp"
       },
       "electronInstallerDebian": {},
       "electronInstallerRedhat": {},
@@ -42,7 +41,7 @@
       },
       "windowsStoreConfig": {
         "packageName": "",
-        "name": "app"
+        "name": "temp"
       }
     }
   },

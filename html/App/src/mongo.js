@@ -18,6 +18,5 @@ mongoClient.connect(function (err, client) {
             document.write("</div>");
         });
     });
-    col.deleteMany({})
     client.close()
 });
