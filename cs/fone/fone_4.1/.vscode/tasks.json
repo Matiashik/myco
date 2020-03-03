@@ -5,7 +5,7 @@
     "tasks": [
         {
             "label": "build",
-            "command": "electron-forge start",
+            "command": "dotnet run",
             "type": "shell",
             "group": {
                 "kind": "build",

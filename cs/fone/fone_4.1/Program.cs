@@ -6,9 +6,24 @@ namespace fone_4._1
     {
         static void Main(string[] args)
         {
-            var pp = new PP();
-            var pp1 = new PP(0, 2, 2, 6, 1);
-            System.Console.WriteLine(pp.Peres(pp1));
+            Console.Write("Do you want to input?[y/n] ");
+            PP pp = new PP();
+            if(Console.ReadLine() == "y") pp = new PP(Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()));
+            pp.Print();
+            System.Console.WriteLine("H="+pp.H);
+            System.Console.WriteLine("Sh="+pp.Sh);
+            System.Console.WriteLine("G="+pp.G);
+            System.Console.WriteLine("S osnivania="+pp.OsnS);
+            System.Console.WriteLine("S bokovoi storoni="+pp.RLSideS);
+            System.Console.WriteLine("S pered storoni="+pp.FBSideS);
+            System.Console.WriteLine("V="+pp.V);
+            System.Console.WriteLine("Diagonal="+pp.Diag);
+            System.Console.WriteLine("Perimetr="+pp.P);
+            System.Console.WriteLine("Radius="+pp.Rad);
+            System.Console.WriteLine("Is it cube?"+pp.IsCube);
+            pp.H = 3;
+            pp.Print();
+            pp.H = 0;
         }
     }
     class PP
@@ -33,12 +48,12 @@ namespace fone_4._1
         private double sh;
         public double Sh
         {
-            get { return h; }
+            get { return sh; }
             set
             {
                 try
                 {
-                    if (value > 0) h = value;
+                    if (value > 0) sh = value;
                     else throw new Exception("Incorrect sh");
                 }
                 catch (Exception ex)
@@ -50,12 +65,12 @@ namespace fone_4._1
         private double g;
         public double G
         {
-            get { return h; }
+            get { return g; }
             set
             {
                 try
                 {
-                    if (value > 0) h = value;
+                    if (value > 0) g = value;
                     else throw new Exception("Incorrect g");
                 }
                 catch (Exception ex)
@@ -93,6 +108,10 @@ namespace fone_4._1
         public double Diag
         {
             get { return Math.Sqrt(g * g + h * h + sh * sh); }
+        }
+        public double P
+        {
+            get{return h*4 + g*4 + sh*4;}
         }
         public double RLSideP
         {
