@@ -6,8 +6,8 @@ namespace practic_13
     {
         static void Main(string[] args)
         {
-            Point3D point1 = new Point3D(3, 2, 5);
-            Point3D point2 = new Point3D(5, 4, 1);
+            Point3D point1 = Point3D.New(2, 3, 4);
+            Point3D point2 = Point3D.New(4, 5, 6);
             point1.Print();
             point2.Print();
             point1.Sum(point2);
@@ -19,19 +19,6 @@ namespace practic_13
             point1.Print();
             point1.Move('z', 3);
             point1.Print();
-            Point3D point3;
-            try
-            {
-                int x = Convert.ToInt32(Console.ReadLine());
-                int y = Convert.ToInt32(Console.ReadLine());
-                int z = Convert.ToInt32(Console.ReadLine());
-                if (x % 5 == 0 || y % 5 == 0 || z % 5 == 0) point3 = new Point3D(x, y, z);
-                else throw new Exception("Can't create point because ни одна из точек не кратна 5");
-            }
-            catch (Exception ex)
-            {
-                System.Console.WriteLine(ex.Message);
-            }
         }
     }
     class Point3D
@@ -102,13 +89,25 @@ namespace practic_13
         }
 
         public Point3D() { x = y = z = 0; }
-        public Point3D(int x, int y, int z)
+        private Point3D(int x, int y, int z)
         {
             this.x = x;
             this.y = y;
             this.z = z;
         }
-
+        public static Point3D New(int x, int y, int z)
+        {
+            try
+            {
+                if (x % 5 == 0 || y % 5 == 0 || z % 5 == 0) return new Point3D(x, y, z);
+                else throw new Exception("Can't create point because ни одна из координат не кратна 5");
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine(ex.Message);
+                return new Point3D(5, 5, 5);
+            }
+        }
         public void Move(char b, int a)
         {
             switch (b)
