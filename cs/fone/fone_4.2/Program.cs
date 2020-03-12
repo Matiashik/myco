@@ -1,53 +1,83 @@
 ﻿using System;
 
-namespace fone_4._2 {
-    class Program {
-        static void Main (string[] args) {
+namespace fone_4._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
             var w = new MatrixWeather();
             w.Print();
         }
     }
-    class MatrixWeather {
+    class MatrixWeather
+    {
         int mon;
-        public int Month {
+        public int Month
+        {
             get { return mon; }
         }
         static int[] days = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
         int day;
-        public int Day {
+        public int Day
+        {
             get { return day; }
         }
-        int[, ] temp;
-        public int[, ] Temp {
-            get { return (int[, ]) temp.Clone (); }
+        int[,] temp;
+        public int[,] Temp
+        {
+            get { return (int[,])temp.Clone(); }
         }
-        public MatrixWeather () {
-            this.day = (new Random()).Next(0, 8);
-            this.mon = (new Random()).Next(0, 13);
-            int wk = 1;
-            for (int i = 1; i <= days[i - 1]; i++) {
-                temp[wk, day] = (new Random ()).Next (-51, 51);
-                if (day == 7) { day = 1; wk++; }
+        public MatrixWeather()
+        {
+            this.day = (new Random()).Next(1, 8);
+            this.mon = (new Random()).Next(1, 13);
+            {
+                int wks = 1;
+                int dd = day;
+                for (int i = 0; i < days[mon - 1]; i++)
+                {
+                    if (dd == 7) { dd = 1; wks++; }
+                    dd++;
+                }
+                this.temp = new int[wks, 7];
+            }
+            int d = this.day - 1;
+            int wk = 0;
+            for (int i = 0; i < days[mon - 1]; i++)
+            {
+                if(d == 6) {wk++; d = 0;}
+                temp[wk, d] = (new Random()).Next(-51, 51);
             }
         }
-        public MatrixWeather (int day, int mon) {
+        public MatrixWeather(int day, int mon)
+        {
             this.day = day;
             this.mon = mon;
-            int wk = 1;
-            for (int i = 1; i <= days[i - 1]; i++) {
-                this.temp[wk, day] = (new Random ()).Next (-51, 51);
-                if (day == 7) { day = 1; wk++; }
+            {
+                int wks = 1;
+                int dd = day;
+                for (int i = 0; i < days[mon - 1]; i++)
+                {
+                    if (dd == 7) { dd = 1; wks++; }
+                    dd++;
+                }
+                this.temp = new int[wks, 7];
+            }
+            int d = this.day - 1;
+            int wk = 0;
+            for (int i = 0; i < days[mon - 1]; i++)
+            {
+                if(d == 6) {wk++; d = 0;}
+                temp[wk, d] = (new Random()).Next(-51, 51);
+                d++;
             }
         }
-        public void Print() {
-            int day = this.day;
-            System.Console.WriteLine("пн  вт  ср  чт  пт  сб  вс");
-            for(int i = 0; i < day; i++) System.Console.Write("  ");
-            int wk = 1;
-            for (int i = 1; i <= days[i - 1]; i++) {
-                Console.Write($"{i} {temp[wk, day]}  ");
-                if (day == 7) { day = 1; wk++; System.Console.WriteLine("");}
-            }
+        public void Print()
+        {
+            System.Console.WriteLine("пн    вт    ср    чт    пт    сб    вс");
+            for (int i = 1; i < day; i++) System.Console.Write("      ");
+            
         }
     }
 }
