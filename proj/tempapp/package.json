@@ -36,7 +36,14 @@
       "electronWinstallerConfig": {
         "name": "tempapp"
       },
-      "electronInstallerDebian": {},
+      "electronInstallerDebian": {
+        "name": "@electron-forge/maker-deb",
+        "config": {
+          "options": {
+            "icon": "src/static/icon.png"
+          }
+        }
+      },
       "electronInstallerRedhat": {},
       "github_repository": {
         "owner": "",
