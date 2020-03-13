@@ -14,12 +14,14 @@ let mainWindow;
 
 const createWindow = () => {
   // Create the browser window.
+  let path = require('path');
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     autoHideMenuBar: true,
-    icon: "res/128.png"
   });
+  
+  mainWindow.setIcon(path.join(__dirname, 'static/256.ico'));
   mainWindow.maximize();
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);
