@@ -23,10 +23,10 @@ namespace fone_4._2
         {
             get { return day; }
         }
-        int[,] temp;
-        public int[,] Temp
+        int[][] temp;
+        public int[][] Temp
         {
-            get { return (int[,])temp.Clone(); }
+            get { return (int[][])temp.Clone(); }
         }
         public MatrixWeather()
         {
@@ -40,14 +40,14 @@ namespace fone_4._2
                     if (dd == 7) { dd = 1; wks++; }
                     dd++;
                 }
-                this.temp = new int[wks, 7];
+                this.temp = new int[wks][7];
             }
             int d = this.day - 1;
             int wk = 0;
             for (int i = 0; i < days[mon - 1]; i++)
             {
                 if(d == 6) {wk++; d = 0;}
-                temp[wk, d] = (new Random()).Next(-51, 51);
+                temp[wk][d] = (new Random()).Next(-51, 51);
             }
         }
         public MatrixWeather(int day, int mon)
@@ -62,14 +62,14 @@ namespace fone_4._2
                     if (dd == 7) { dd = 1; wks++; }
                     dd++;
                 }
-                this.temp = new int[wks, 7];
+                this.temp = new int[wks][7];
             }
             int d = this.day - 1;
             int wk = 0;
             for (int i = 0; i < days[mon - 1]; i++)
             {
                 if(d == 6) {wk++; d = 0;}
-                temp[wk, d] = (new Random()).Next(-51, 51);
+                temp[wk][d] = (new Random()).Next(-51, 51);
                 d++;
             }
         }
@@ -77,7 +77,16 @@ namespace fone_4._2
         {
             System.Console.WriteLine("пн    вт    ср    чт    пт    сб    вс");
             for (int i = 1; i < day; i++) System.Console.Write("      ");
-            
+            int u = 0;
+	    foreach (int[] wk in temp)
+	    {
+		    foreach (int d in wk)
+		    {
+			u++;
+			Console.Write($"{u} {d}");
+			for (int j = 0; j < 6 - d.ToString().Length - u.ToString().Length; j++) Console.Write(" ");
+		    }
+	    }
         }
     }
 }
