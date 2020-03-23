@@ -8,17 +8,23 @@ namespace practic_13
         {
             Point3D point1 = Point3D.New(2, 3, 4);
             Point3D point2 = Point3D.New(4, 5, 6);
+            System.Console.WriteLine("Точка 1");
             point1.Print();
+            System.Console.WriteLine("Точка 2");
             point2.Print();
-            point1.Sum(point2);
-            point1.Print();
-            point2.Sum(3);
-            point2.Print();
+            System.Console.WriteLine("Радуис-вектор 1 точки");
             System.Console.WriteLine(point1.RadVec);
-            point1.X = 3;
-            point1.Print();
-            point1.Move('z', 3);
-            point1.Print();
+            System.Console.WriteLine("Домножим координаты точки 2 на 6");
+            point2.Mult = 6; point2.Print();
+            System.Console.WriteLine("Сдвинем точку 1 на 3 по Ox");
+            point1.X += 3; point1.Print();
+            System.Console.WriteLine("И на -1 по всем осям");
+            point1--; point1.Print();
+            System.Console.WriteLine("Точку 2 также на -1 по всем осям");
+            point2--; point2.Print();
+            System.Console.WriteLine("Точка 1 больше или равна точке 2? " + (point1 >= point2));
+            if(point1) System.Console.WriteLine("Трехмерная точка 1 лежит в четвертой четверти плоскости xy и имеет координату z, меньшую нуля");
+            if(point2) System.Console.WriteLine("Трехмерная точка 2 лежит в четвертой четверти плоскости xy и имеет координату z, меньшую нуля");
         }
     }
     class Point3D
@@ -108,39 +114,51 @@ namespace practic_13
                 return new Point3D(5, 5, 5);
             }
         }
-        public void Move(char b, int a)
-        {
-            switch (b)
-            {
-                case 'x':
-                    x += a;
-                    break;
-                case 'y':
-                    y += a;
-                    break;
-                case 'z':
-                    z += a;
-                    break;
-                default:
-                    System.Console.WriteLine("Error");
-                    break;
-            }
-        }
         public void Print()
         {
             System.Console.WriteLine($"x: {x}, y: {y}, z: {z}");
         }
-        public void Sum(Point3D a)
+        public static Point3D operator +(Point3D a, Point3D b)
         {
-            this.x += a.x;
-            this.y += a.y;
-            this.z += a.z;
+            return new Point3D(a.x + b.x, a.y + b.y, a.z + b.z);
         }
-        public void Sum(int a)
+        public static Point3D operator -(Point3D a, Point3D b)
         {
-            x += a;
-            y += a;
-            z += a;
+            return new Point3D(a.x - b.x, a.y - b.y, a.z - b.z);
+        }
+        public static Point3D operator ++(Point3D a)
+        {
+            return new Point3D(a.x + 1, a.y + 1, a.z + 1);
+        }
+        public static Point3D operator --(Point3D a)
+        {
+            return new Point3D(a.x - 1, a.y - 1, a.z - 1);
+        }
+        public static bool operator >=(Point3D a, Point3D b)
+        {
+            if(a.x + a.y + a.z >= b.x + b.y + b.z) return true;
+            else return false;
+        }
+        public static bool operator <=(Point3D a, Point3D b)
+        {
+            if(a.x + a.y + a.z <= b.x + b.y + b.z) return true;
+            else return false;
+        }
+        public static Point3D operator &(Point3D a, Point3D b)
+        {
+            return new Point3D(a.x & b.x, a.y & b.y, a.z & b.z);
+        }
+        public static Point3D operator |(Point3D a, Point3D b)
+        {
+            return new Point3D(a.x | b.x, a.y | b.y, a.z | b.z);
+        }
+        public static bool operator true(Point3D a)
+        {
+            return (a.x > 0 && a.y < 0 && a.z < 0);
+        }
+        public static bool operator false(Point3D a)
+        {
+            return !(a.x > 0 && a.y < 0 && a.z < 0);
         }
     }
 }
