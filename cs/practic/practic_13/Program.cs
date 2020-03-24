@@ -128,11 +128,17 @@ namespace practic_13
         }
         public static Point3D operator ++(Point3D a)
         {
-            return new Point3D(a.x + 1, a.y + 1, a.z + 1);
+            a.x++;
+            a.y++;
+            a.z++;
+            return a;
         }
         public static Point3D operator --(Point3D a)
         {
-            return new Point3D(a.x - 1, a.y - 1, a.z - 1);
+            a.x--;
+            a.y--;
+            a.z--;
+            return a;
         }
         public static bool operator >=(Point3D a, Point3D b)
         {
