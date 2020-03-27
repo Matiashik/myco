@@ -20,3 +20,5 @@
 /home/universai/myco/net/fone/fone_4.2/obj/Debug/netcoreapp3.1/fone_4.2.AssemblyInfo.cs
 /home/universai/myco/net/fone/fone_4.2/obj/Debug/netcoreapp3.1/fone_4.2.dll
 /home/universai/myco/net/fone/fone_4.2/obj/Debug/netcoreapp3.1/fone_4.2.pdb
+/home/universai/myco/cs/fone/fone_4.2/obj/Debug/netcoreapp3.1/fone_4.2.csproj.CoreCompileInputs.cache
+/home/universai/myco/cs/fone/fone_4.2/obj/Debug/netcoreapp3.1/fone_4.2.genruntimeconfig.cache

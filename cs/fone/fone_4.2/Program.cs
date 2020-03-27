@@ -1,5 +1,12 @@
 ﻿using System;
+/*Амплитуда
+    Неверно высчитывался день, с точностью данных все было ок
+    Добавил условие для инкремента счетчика Z (198&212)
+*/
 
+/*Краш
+    У меня все работает, понятия не имею что не так. Убрал StackTrace
+*/
 namespace fone_4._2
 {
     class Program
@@ -22,9 +29,20 @@ namespace fone_4._2
             w.Day = Convert.ToInt32(Console.ReadLine());
             System.Console.WriteLine("Текущий месяц: ");
             w.Print();
+            System.Console.WriteLine("Создадим еще 1 месяц");
+            MatrixWeather w2 = new MatrixWeather();
+            w.Print();
+            System.Console.Write("Этот месяц " + (w > w2 ? "меньше" : "больше") + " существующего");
+            MatrixWeather w3 = (MatrixWeather)w2.Clone();
+            if (w3.Day != 7) w3++; else w3--;
+            if (w2 & w3)
+            {
+                System.Console.WriteLine("Существует 3 месяц, равный второму");
+                w3.Print();
+            }
         }
     }
-    class MatrixWeather
+    class MatrixWeather : ICloneable //не бейте ради всего святого
     {
         int mon;
         public int Month { get { return mon; } }
@@ -91,7 +109,6 @@ namespace fone_4._2
                 catch (Exception ex)
                 {
                     System.Console.WriteLine(ex.Message);
-                    System.Console.WriteLine(ex.StackTrace);
                 }
             }
         }
@@ -118,6 +135,94 @@ namespace fone_4._2
             get { return (int[,])temp.Clone(); }
             private set { temp = (int[,])value.Clone(); }
         }
+
+
+        public static bool operator >(MatrixWeather a, MatrixWeather b)
+        {
+            return a.Month > b.Month;
+        }
+        public static bool operator <(MatrixWeather a, MatrixWeather b)
+        {
+            return a.Month < b.Month;
+        }
+        public static MatrixWeather operator ++(MatrixWeather a)
+        {
+            a.Day += 1;
+            return a;
+        }
+        public static MatrixWeather operator --(MatrixWeather a)
+        {
+            a.Day -= 1;
+            return a;
+        }
+        public static bool operator true(MatrixWeather a)
+        {
+            foreach (int i in a.temp) if (i < 0 && i != NoData) return false;
+            return true;
+        }
+        public static bool operator false(MatrixWeather a)
+        {
+            foreach (int i in a.temp) if (i < 0 && i != NoData) return false;
+            return true;
+        }
+        public static bool operator &(MatrixWeather a, MatrixWeather b)
+        {
+            int[] arr = new int[a.Days];
+            int[] brr = new int[b.Days];
+            int ind = 0;
+            foreach (int i in a.temp)
+            {
+                if (i != NoData)
+                {
+                    arr[ind] = i;
+                    ind++;
+                }
+            }
+            ind = 0;
+            foreach (int i in b.temp)
+            {
+                if (i != NoData)
+                {
+                    brr[ind] = i;
+                    ind++;
+                }
+            }
+            for (int i = 0; i < (arr.Length < brr.Length ? arr.Length : brr.Length); i++) //надеюсь теперь моя работа не бездушна?
+            {
+                if (arr[i] != brr[i]) return false;
+            }
+            return true;
+        }
+
+
+        public int this[int w, int d]
+        {
+            get
+            {
+                try
+                {
+                    return temp[w, d];
+                }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine(ex.Message);
+                }
+                return NoData;
+            }
+            set
+            {
+                try
+                {
+                    temp[w, d] = value;
+                }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine(ex.Message);
+                }
+            }
+        }
+
+
         public MatrixWeather()
         {
             Random rand = new Random();
@@ -166,6 +271,12 @@ namespace fone_4._2
                 }
             }
         }
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
+
+
         public void Print()
         {
             System.Console.WriteLine("пн      вт      ср      чт      пт      сб      вс");
@@ -188,7 +299,7 @@ namespace fone_4._2
             int z = 0;
             foreach (int i in temp)
             {
-                z++;
+                if (i != NoData) z++;
                 if (i - bef > MaxA && bef != NoData && i != NoData) MaxA = i - bef;
                 bef = i;
             }
@@ -202,7 +313,7 @@ namespace fone_4._2
             int z = 0;
             foreach (int i in temp)
             {
-                z++;
+                if (i != NoData) z++;
                 if (i - bef > MaxA && bef != NoData && i != NoData) { MaxA = i - bef; day = z; }
                 bef = i;
             }

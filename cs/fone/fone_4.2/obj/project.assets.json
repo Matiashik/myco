@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/universai/myco/net/fone/fone_4.2/fone_4.2.csproj",
+      "projectUniqueName": "/home/universai/myco/cs/fone/fone_4.2/fone_4.2.csproj",
       "projectName": "fone_4.2",
-      "projectPath": "/home/universai/myco/net/fone/fone_4.2/fone_4.2.csproj",
+      "projectPath": "/home/universai/myco/cs/fone/fone_4.2/fone_4.2.csproj",
       "packagesPath": "/home/universai/.nuget/packages/",
-      "outputPath": "/home/universai/myco/net/fone/fone_4.2/obj/",
+      "outputPath": "/home/universai/myco/cs/fone/fone_4.2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/universai/.nuget/NuGet/NuGet.Config"
@@ -56,7 +56,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.201/RuntimeIdentifierGraph.json"
       }
     }
   }

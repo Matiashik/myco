@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YQ9N7uCRgItOt5I0v8JZxG8e+a+jw1Cfvcl5gd+xXwhKyu7UbP/Sgw1tEooP6/Xh9ifn0hvrRhlFZeOOGr/CYA==",
+  "dgSpecHash": "jGJOCSmfVeSwYoV6TkE/+rUHoBcwSns5jRZ/a9MKJZN8xmrfWRlLZoiKHqjXgM3aiENvnX4tVyRz52Mlsj2ehg==",
   "success": true,
-  "projectFilePath": "/home/universai/myco/net/bin/bin.csproj",
+  "projectFilePath": "/home/universai/myco/cs/bin/bin.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

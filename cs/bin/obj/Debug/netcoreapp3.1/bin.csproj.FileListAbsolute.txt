@@ -22,3 +22,5 @@
 /home/universai/myco/net/bin/bin/Debug/netcoreapp3.1/bin.dll
 /home/universai/myco/net/bin/bin/Debug/netcoreapp3.1/bin.pdb
 /home/universai/myco/net/bin/obj/Debug/netcoreapp3.1/bin.genruntimeconfig.cache
+/home/universai/myco/cs/bin/obj/Debug/netcoreapp3.1/bin.csproj.CoreCompileInputs.cache
+/home/universai/myco/cs/bin/obj/Debug/netcoreapp3.1/bin.genruntimeconfig.cache
