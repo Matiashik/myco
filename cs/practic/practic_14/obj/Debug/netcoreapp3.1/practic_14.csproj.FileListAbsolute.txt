@@ -1,0 +1,13 @@
+/home/universai/myco/cs/practic/practic_14/bin/Debug/netcoreapp3.1/practic_14
+/home/universai/myco/cs/practic/practic_14/bin/Debug/netcoreapp3.1/practic_14.deps.json
+/home/universai/myco/cs/practic/practic_14/bin/Debug/netcoreapp3.1/practic_14.runtimeconfig.json
+/home/universai/myco/cs/practic/practic_14/bin/Debug/netcoreapp3.1/practic_14.runtimeconfig.dev.json
+/home/universai/myco/cs/practic/practic_14/bin/Debug/netcoreapp3.1/practic_14.dll
+/home/universai/myco/cs/practic/practic_14/bin/Debug/netcoreapp3.1/practic_14.pdb
+/home/universai/myco/cs/practic/practic_14/obj/Debug/netcoreapp3.1/practic_14.csprojAssemblyReference.cache
+/home/universai/myco/cs/practic/practic_14/obj/Debug/netcoreapp3.1/practic_14.csproj.CoreCompileInputs.cache
+/home/universai/myco/cs/practic/practic_14/obj/Debug/netcoreapp3.1/practic_14.AssemblyInfoInputs.cache
+/home/universai/myco/cs/practic/practic_14/obj/Debug/netcoreapp3.1/practic_14.AssemblyInfo.cs
+/home/universai/myco/cs/practic/practic_14/obj/Debug/netcoreapp3.1/practic_14.dll
+/home/universai/myco/cs/practic/practic_14/obj/Debug/netcoreapp3.1/practic_14.pdb
+/home/universai/myco/cs/practic/practic_14/obj/Debug/netcoreapp3.1/practic_14.genruntimeconfig.cache

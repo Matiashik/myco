@@ -1,0 +1,13 @@
+/home/universai/myco/cs/fone/fone_5.1/bin/Debug/netcoreapp3.1/fone_5.1
+/home/universai/myco/cs/fone/fone_5.1/bin/Debug/netcoreapp3.1/fone_5.1.deps.json
+/home/universai/myco/cs/fone/fone_5.1/bin/Debug/netcoreapp3.1/fone_5.1.runtimeconfig.json
+/home/universai/myco/cs/fone/fone_5.1/bin/Debug/netcoreapp3.1/fone_5.1.runtimeconfig.dev.json
+/home/universai/myco/cs/fone/fone_5.1/bin/Debug/netcoreapp3.1/fone_5.1.dll
+/home/universai/myco/cs/fone/fone_5.1/bin/Debug/netcoreapp3.1/fone_5.1.pdb
+/home/universai/myco/cs/fone/fone_5.1/obj/Debug/netcoreapp3.1/fone_5.1.csprojAssemblyReference.cache
+/home/universai/myco/cs/fone/fone_5.1/obj/Debug/netcoreapp3.1/fone_5.1.csproj.CoreCompileInputs.cache
+/home/universai/myco/cs/fone/fone_5.1/obj/Debug/netcoreapp3.1/fone_5.1.AssemblyInfoInputs.cache
+/home/universai/myco/cs/fone/fone_5.1/obj/Debug/netcoreapp3.1/fone_5.1.AssemblyInfo.cs
+/home/universai/myco/cs/fone/fone_5.1/obj/Debug/netcoreapp3.1/fone_5.1.dll
+/home/universai/myco/cs/fone/fone_5.1/obj/Debug/netcoreapp3.1/fone_5.1.pdb
+/home/universai/myco/cs/fone/fone_5.1/obj/Debug/netcoreapp3.1/fone_5.1.genruntimeconfig.cache

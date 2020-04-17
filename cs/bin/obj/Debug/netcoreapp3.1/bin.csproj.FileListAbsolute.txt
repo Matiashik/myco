@@ -24,3 +24,10 @@
 /home/universai/myco/net/bin/obj/Debug/netcoreapp3.1/bin.genruntimeconfig.cache
 /home/universai/myco/cs/bin/obj/Debug/netcoreapp3.1/bin.csproj.CoreCompileInputs.cache
 /home/universai/myco/cs/bin/obj/Debug/netcoreapp3.1/bin.genruntimeconfig.cache
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/DnsClient.dll
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/MongoDB.Bson.dll
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/MongoDB.Driver.dll
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/MongoDB.Driver.Core.dll
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/MongoDB.Libmongocrypt.dll
+/home/universai/myco/cs/bin/bin/Debug/netcoreapp3.1/SharpCompress.dll
+/home/universai/myco/cs/bin/obj/Debug/netcoreapp3.1/bin.csproj.CopyComplete
