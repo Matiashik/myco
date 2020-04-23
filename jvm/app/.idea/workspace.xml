@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="237f36f4-e7c3-424b-b0e4-db0f2b39ae77" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../c/app/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/app/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/app/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/app/out/App" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/app/src/Main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../go/app/Main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../go/app/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/app/META-INF/app.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/app/META-INF/app.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/app/univ/head/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/univ/head/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1aqtlqkmnBk2AQyZOUmEBTCi8q4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="MainKt" type="JetRunConfigurationType" nameIsGenerated="true">
+      <module name="app" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="univ.head.MainKt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="app" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="univ.head.MainKt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="237f36f4-e7c3-424b-b0e4-db0f2b39ae77" name="Default Changelist" comment="" />
+      <created>1587475105083</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587475105083</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="340" y="502" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587475165753">
+      <screen x="0" y="32" width="2560" height="1408" />
+    </state>
+    <state x="340" y="502" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.2560.1408@0.32.2560.1408" timestamp="1587475165753" />
+    <state width="1137" height="178" key="GridCell.Tab.0.bottom" timestamp="1587475192180">
+      <screen x="0" y="32" width="2560" height="1408" />
+    </state>
+    <state width="1137" height="178" key="GridCell.Tab.0.bottom/0.32.2560.1408@0.32.2560.1408" timestamp="1587475192180" />
+    <state width="1137" height="178" key="GridCell.Tab.0.center" timestamp="1587475192180">
+      <screen x="0" y="32" width="2560" height="1408" />
+    </state>
+    <state width="1137" height="178" key="GridCell.Tab.0.center/0.32.2560.1408@0.32.2560.1408" timestamp="1587475192180" />
+    <state width="1137" height="178" key="GridCell.Tab.0.left" timestamp="1587475192179">
+      <screen x="0" y="32" width="2560" height="1408" />
+    </state>
+    <state width="1137" height="178" key="GridCell.Tab.0.left/0.32.2560.1408@0.32.2560.1408" timestamp="1587475192179" />
+    <state width="1137" height="178" key="GridCell.Tab.0.right" timestamp="1587475192180">
+      <screen x="0" y="32" width="2560" height="1408" />
+    </state>
+    <state width="1137" height="178" key="GridCell.Tab.0.right/0.32.2560.1408@0.32.2560.1408" timestamp="1587475192180" />
+    <state x="315" y="544" width="1168" height="770" key="new project wizard" timestamp="1587475481353">
+      <screen x="0" y="32" width="2560" height="1408" />
+    </state>
+    <state x="315" y="544" width="1168" height="770" key="new project wizard/0.32.2560.1408@0.32.2560.1408" timestamp="1587475481353" />
+  </component>
+</project>
