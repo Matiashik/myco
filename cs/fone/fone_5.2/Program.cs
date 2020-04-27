@@ -1,6 +1,6 @@
 ﻿using System;
 using static System.Math;
-//    v
+//    1
 //0        2
 //    3
 namespace fone_5._2
@@ -11,35 +11,54 @@ namespace fone_5._2
         {
             Console.Title = "PACMAN";
 
-            for (int i = 0; i < 15; i++)
-            {
-                for (int j = 0; j < 15; j++)
-                {
-                    Field[i, j] = 0;
-                }
-            }
             FPrint(Field);
 
             while (true)
             {
                 pac.Move();
-                if (pac.X == gh.X && pac.Y == gh.Y) { System.Console.WriteLine("Game Over"); break; }
+                if (pac.X == gh1.X && pac.Y == gh1.Y) { System.Console.WriteLine("Game Over"); break; }
+                if (pac.X == gh2.X && pac.Y == gh2.Y) { System.Console.WriteLine("Game Over"); break; }
                 if (pac.X == sgh.X && pac.Y == sgh.Y) { System.Console.WriteLine("Game Over"); break; }
-                if (Field[pac.X, pac.Y] == 2) Field[pac.X, pac.Y] = 0;
-                if (Field[pac.X, pac.Y] == 3) { Field[pac.X, pac.Y] = 0; pac.v = 2; }
-                gh.Move();
-                if (pac.X == gh.X && pac.Y == gh.Y) { System.Console.WriteLine("Game Over"); break; }
+                if (Field[pac.Y, pac.X] == 2) Field[pac.Y, pac.X] = 0;
+                if (Field[pac.Y, pac.X] == 3) { Field[pac.Y, pac.X] = 0; pac.v = 2; }
+                gh1.Move();
+                if (pac.X == gh1.X && pac.Y == gh1.Y) { System.Console.WriteLine("Game Over"); break; }
+                if (pac.X == gh2.X && pac.Y == gh2.Y) { System.Console.WriteLine("Game Over"); break; }
+                if (pac.X == sgh.X && pac.Y == sgh.Y) { System.Console.WriteLine("Game Over"); break; }
+                gh2.Move();
+                if (pac.X == gh1.X && pac.Y == gh1.Y) { System.Console.WriteLine("Game Over"); break; }
+                if (pac.X == gh2.X && pac.Y == gh2.Y) { System.Console.WriteLine("Game Over"); break; }
                 if (pac.X == sgh.X && pac.Y == sgh.Y) { System.Console.WriteLine("Game Over"); break; }
                 sgh.Move(pac);
-                if (pac.X == gh.X && pac.Y == gh.Y) { System.Console.WriteLine("Game Over"); break; }
+                if (pac.X == gh1.X && pac.Y == gh1.Y) { System.Console.WriteLine("Game Over"); break; }
+                if (pac.X == gh2.X && pac.Y == gh2.Y) { System.Console.WriteLine("Game Over"); break; }
                 if (pac.X == sgh.X && pac.Y == sgh.Y) { System.Console.WriteLine("Game Over"); break; }
                 FPrint(Field);
             }
+            FPrint(Field);
         }
-        public static int[,] Field = new int[15, 15];
+        public static int[,] Field =
+        {
+            {0,0,0,1,0,0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,1,0,0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,1,0,0,0,0,0,0,0,0,0,0,0},
+            {1,1,1,1,0,0,0,1,1,1,1,0,1,0,0},
+            {0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
+            {0,0,0,0,1,1,1,1,1,1,1,1,1,0,0},
+            {0,0,0,0,0,0,1,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,1,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,1,1,1,1,0,0,0,0,0},
+            {0,0,0,0,0,0,1,2,0,1,1,1,1,1,0},
+            {0,0,0,1,0,0,1,0,0,1,0,0,0,0,0},
+            {0,0,0,1,0,0,0,0,0,0,0,0,0,0,0},
+            {1,0,0,1,1,1,1,1,1,1,1,0,0,0,0},
+            {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+            {1,1,1,1,0,1,1,1,0,0,1,1,1,0,1}
+        };
         public static Pacman pac = new Pacman(7, 7, 0);
-        public static Ghost gh = new Ghost(5, 3, 2);
-        public static SGhost sgh = new SGhost(6, 7, 0);
+        public static Ghost gh1 = new Ghost(5, 3, 2);
+        public static Ghost gh2 = new Ghost(4, 7, 2);
+        public static SGhost sgh = new SGhost(4, 3, 0);
         public static void FPrint(int[,] a)
         {
             Console.Clear();
@@ -48,9 +67,15 @@ namespace fone_5._2
                 for (int j = 0; j < 15; j++)
                 {
                     if (j == pac.X && pac.Y == i) pac.Draw();
-                    else if (j == gh.X && gh.Y == i) gh.Draw();
+                    else if (j == gh1.X && gh1.Y == i) gh1.Draw();
+                    else if (j == gh2.X && gh2.Y == i) gh1.Draw();
                     else if (j == sgh.X && sgh.Y == i) sgh.Draw();
-                    else System.Console.Write(a[i, j]);
+                    else
+                    {
+                        Console.ForegroundColor = a[i, j] == 1 ? ConsoleColor.White : (a[i,j] == 2 ? ConsoleColor.DarkMagenta : ConsoleColor.Black);
+                        System.Console.Write(a[i, j]);
+                        Console.ResetColor();
+                    }
                 }
                 System.Console.WriteLine();
             }
@@ -89,20 +114,20 @@ namespace fone_5._2
             switch (a.KeyChar.ToString().ToLower())
             {
                 case "w":
-                    if (Y > 0) { if (Program.Field[X, Y - v] != 1) Y -= v; return; }
-                    else if (Program.Field[X, 14] != 1) { Y = 14; return; }
+                    if (Y > 0) { if (Program.Field[Y - v, X] != 1) Y -= v; return; }
+                    else if (Program.Field[14, X] != 1) { Y = 14; return; }
                     break;
                 case "s":
-                    if (Y < 14) { if (Program.Field[X, Y + v] != v) Y += v; return; }
-                    else if (Program.Field[X, 0] != 1) { Y = 0; return; }
+                    if (Y < 14) { if (Program.Field[Y + v, X] != v) Y += v; return; }
+                    else if (Program.Field[0, X] != 1) { Y = 0; return; }
                     break;
                 case "a":
-                    if (X > 0) { if (Program.Field[X - v, Y] != v) X -= v; return; }
-                    else if (Program.Field[14, Y] != 1) { X = 14; return; }
+                    if (X > 0) { if (Program.Field[Y, X - v] != v) X -= v; return; }
+                    else if (Program.Field[Y, 14] != 1) { X = 14; return; }
                     break;
                 case "d":
-                    if (X < 14) { if (Program.Field[X + v, Y] != v) X += v; return; }
-                    else if (Program.Field[0, Y] != 1) { X = 0; return; }
+                    if (X < 14) { if (Program.Field[Y, X + v] != v) X += v; return; }
+                    else if (Program.Field[Y, 0] != 1) { X = 0; return; }
                     break;
                 default: break;
             }
@@ -120,29 +145,30 @@ namespace fone_5._2
         }
         public override void Move()
         {
-            var a = N == 1 ? 'w' : (N == 0 ? 'a' : (N == 3 ? 'd' : 's'));
             while (true)
             {
+                var a = N == 1 ? 'w' : (N == 0 ? 'a' : (N == 3 ? 'd' : 's'));
                 switch (a.ToString().ToLower())
                 {
                     case "w":
-                        if (Y > 0) { if (Program.Field[X, Y - v] != 1) Y -= v; return;}
-                        else if (Program.Field[X, 14] != 1) {Y = 14; return;}
+                        if (Y > 0) { if (Program.Field[Y - v, X] != 1) { Y -= v; return; } }
+                        else if (Program.Field[14, X] != 1) { Y = 14; return; }
+                        N = N < 4 ? (N + rand.Next())%4 : 0;
                         break;
                     case "s":
-                        if (Y < 14) { if (Program.Field[X, Y + v] != v) Y += v; return;}
-                        else if (Program.Field[X, 0] != 1) {Y = 0; return;}
+                        if (Y < 14) { if (Program.Field[Y + v, X] != v) { Y += v; return; } }
+                        else if (Program.Field[0, X] != 1) { Y = 0; return; }
+                        N = N < 4 ? (N + rand.Next())%4 : 0;
                         break;
                     case "a":
-                        if (X > 0) { if (Program.Field[X - v, Y] != v) X -= v; return;}
-                        else if (Program.Field[14, Y] != 1) {X = 14; return;}
+                        if (X > 0) { if (Program.Field[Y, X - v] != v) { X -= v; return; } }
+                        else if (Program.Field[Y, 14] != 1) { X = 14; return; }
+                        N = N < 4 ? (N + rand.Next())%4 : 0;
                         break;
                     case "d":
-                        if (X < 14) { if (Program.Field[X + v, Y] != v) X += v; return;}
-                        else if (Program.Field[0, Y] != 1) {X = 0; return;}
-                        break;
-                    default:
-                        N = N < 4 ? N + 1 : 0;
+                        if (X < 14) { if (Program.Field[Y, X + v] != v) { X += v; return; } }
+                        else if (Program.Field[Y, 0] != 1) { X = 0; return; }
+                        N = N < 4 ? (N + rand.Next())%4 : 0;
                         break;
                 }
             }
@@ -167,7 +193,7 @@ namespace fone_5._2
             var a = N == 1 ? 'w' : (N == 0 ? 'a' : (N == 3 ? 'd' : 's'));
             while (true)
             {
-                
+                break;
             }
         }
     }
