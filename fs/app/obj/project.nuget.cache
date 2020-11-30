@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "i8wE33AkNUGcBFzLV3qZDs7QBCdpTxu/u9Yk8AiPEmZ0RxwQ300nbCzZyoYy+pqInMEKo8yYPiOR/D7N2hZVdw==",
+  "dgSpecHash": "tu51UGxUaFOYd/QZQgydJdGykLwH3QJBkfVzkm/Tq8BwuBcPMoK2WKpGvBanK/lhcaq5toSlB7cmNoMW29cL2A==",
   "success": true,
   "projectFilePath": "/home/universai/myco/fs/app/app.fsproj",
   "expectedPackageFiles": [
-    "/home/universai/.nuget/packages/fsharp.core/4.7.0/fsharp.core.4.7.0.nupkg.sha512"
+    "/home/universai/.nuget/packages/fsharp.core/4.7.2/fsharp.core.4.7.2.nupkg.sha512"
   ],
   "logs": []
 }
