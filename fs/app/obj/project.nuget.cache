@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VEtqMiArpJQl85r7stASb+1bQPbF0sufuhx9C3FoNORV9btoe8JizqFCb6OLF3F345j7lNVth6NA9jL86YfbAw==",
+  "success": true,
+  "projectFilePath": "/home/universai/myco/fs/app/app.fsproj",
+  "expectedPackageFiles": [
+    "/home/universai/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
